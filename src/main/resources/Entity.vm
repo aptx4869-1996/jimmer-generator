@@ -1,0 +1,29 @@
+package ${packageName}.model.entity;
+
+import org.babyfish.jimmer.sql.*;
+import org.springframework.lang.Nullable;
+import java.time.LocalDateTime;
+
+/*
+* ${tableInfo.tableComment}
+*/
+@Entity
+@Table(name = "${tableInfo.tableName}")
+public interface ${tableInfo.className} {
+#foreach ($item in $list)
+@Column(name = "${item.columnName}")
+
+    #if(${item.key} == 'PRI')
+    @Id
+    @GeneratedValue
+    #end
+    #if(${item.nullable} == 'YES')
+    @Nullable
+    #end
+    #if(${item.fieldName} == 'isDel')
+    @LogicalDeleted(value = "1", restoredValue = "0")
+    #end
+    $item.columnType $item.fieldName ();
+#end
+
+}
