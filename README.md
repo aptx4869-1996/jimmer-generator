@@ -2,7 +2,7 @@
 jimmer工具-代码生成器
 
 springboot + velocity
-# 配置文件
+## 配置文件
 #数据库类型，根据配置注册相应的解析器，转换器  
 #mysql数据库：mysql  
 jimmer.generator.database-type: mysql  
