@@ -1,0 +1,29 @@
+spring:
+  graphql:
+    graphiql:
+      path: /graphql-test
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.173.82:3301/dataassets_registration?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: linewell
+    password: zxcvbnm!QAZ
+
+jimmer:
+  jimmer:
+    dialect: org.babyfish.jimmer.sql.dialect.MySqlDialect
+    show-sql: true
+    database-validation-mode: ERROR
+    pretty-sql: true
+
+#springdoc:
+#  swagger-ui:
+#    path: /swagger-ui.html
+
+#spring:
+#  graphql:
+#    graphiql:
+#      enabled: true
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:jimmer-sql-graphql;database_to_upper=true

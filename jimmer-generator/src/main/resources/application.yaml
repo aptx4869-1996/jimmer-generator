@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.173.82:3301/dataassets_registration?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: linewell
+    password: zxcvbnm!QAZ
+
+jimmer:
+  generator:
+    #数据库类型，根据配置注册相应的解析器，转换器
+    database-type: mysql
+    #报名前缀
+    #repository 会生成到 ${packageName}.repository下
+    #entity 会生成到 ${packageName}.model.entity下
+    package-name-prefix: cn.linewell.registration
+    output: D:\11
+#    target-table:

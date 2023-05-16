@@ -1,0 +1,16 @@
+package ${packageName}.model.entity;
+
+import org.babyfish.jimmer.sql.*;
+import org.springframework.lang.Nullable;
+import java.time.LocalDateTime;
+
+/*
+* ${tableInfo.tableComment}
+*/
+@Data
+public class ${tableInfo.className}Input {
+#foreach ($item in $list)
+    private $item.columnType $item.fieldName;
+#end
+
+}

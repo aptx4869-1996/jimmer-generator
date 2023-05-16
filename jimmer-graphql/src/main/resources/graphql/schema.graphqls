@@ -1,0 +1,348 @@
+scalar Date
+
+type Query {
+    assetDataT(input: AssetDataTInput!): [AssetDataT!]!
+}
+
+type Mutation {
+    saveAssetData(input: AssetDataTInput): AssetDataT!
+    deleteAssetData(ids: [String]!):Int
+}
+
+##############################AssetApiT##############################
+type AssetApiT {
+    tid : String
+    assetId : String
+    serviceVersion : String
+    serviceType : String
+    respContentType : String
+    reqProtocol : String
+    reqMethod : String
+    reqUrl : String
+    gatewayServiceId : String
+    groupId : String
+    groupName : String
+    isAuthorizes : String
+    reqTotalTimes : String
+    reqSuccessTimes : String
+    appNum : String
+    avgTimming : String
+    score : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetApiTInput {
+    tid : String
+    assetId : String
+    serviceVersion : String
+    serviceType : String
+    respContentType : String
+    reqProtocol : String
+    reqMethod : String
+    reqUrl : String
+    gatewayServiceId : String
+    groupId : String
+    groupName : String
+    isAuthorizes : String
+    reqTotalTimes : String
+    reqSuccessTimes : String
+    appNum : String
+    avgTimming : String
+    score : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+
+
+
+
+
+##############################AssetApplicationT##############################
+type AssetApplicationT {
+    tid : String
+    assetId : String
+    proId : String
+    appType : String
+    appUrl : String
+    sysArchiType : String
+    authLevel : String
+    onlineTime : Date
+    offlineTime : Date
+    icon : String
+    iconUrl : String
+    netType : String
+    sysDeploy : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetApplicationTInput {
+    tid : String
+    assetId : String
+    proId : String
+    appType : String
+    appUrl : String
+    sysArchiType : String
+    authLevel : String
+    onlineTime : Date
+    offlineTime : Date
+    icon : String
+    iconUrl : String
+    netType : String
+    sysDeploy : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+
+
+
+
+
+##############################AssetCatalogT##############################
+type AssetCatalogT {
+    tid : String
+    assetId : String
+    shareCondCode : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetCatalogTInput {
+    tid : String
+    assetId : String
+    shareCondCode : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+
+
+
+
+
+##############################AssetCodeT##############################
+type AssetCodeT {
+    tid : String
+    assetId : String
+    codeType : String
+    codeStatus : String
+    isRemove : String
+    metaCreateTime : Date
+    metaUpdateTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetCodeTInput {
+    tid : String
+    assetId : String
+    codeType : String
+    codeStatus : String
+    isRemove : String
+    metaCreateTime : Date
+    metaUpdateTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+
+
+
+
+
+##############################AssetDataT##############################
+type AssetDataT {
+    tid : String
+    assetName : String
+    resourceName : String
+    assetClass : String
+    assetDesc : String
+    assetIdentifier : String
+    assetCode : String
+    idMapping : String
+    assetVersion : String
+    assetStatus : String
+    isActivity : String
+    channelCode : String
+    dynamicMetadata : String
+    registerTime : Date
+    publishTime : Date
+    offShelfTime : Date
+    archivingTime : Date
+    passTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+    assetApplications: [AssetApplicationT]
+}
+input AssetDataTInput {
+    tid : String
+    assetName : String
+    resourceName : String
+    assetClass : String
+    assetDesc : String
+    assetIdentifier : String
+    assetCode : String
+    idMapping : String
+    assetVersion : String
+    assetStatus : String
+    isActivity : String
+    channelCode : String
+    dynamicMetadata : String
+    registerTime : Date
+    publishTime : Date
+    offShelfTime : Date
+    archivingTime : Date
+    passTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+    assetApplications: [AssetApplicationTInput]
+}
+
+
+
+
+
+##############################AssetDatasourceT##############################
+type AssetDatasourceT {
+    tid : String
+    assetId : String
+    dbType : String
+    dbIp : String
+    dbPort : String
+    dbUser : String
+    dbPassword : String
+    dbMetaType : String
+    dbMetaIp : String
+    dbMetaPort : String
+    dbMetaUser : String
+    dbMetaPassword : String
+    dbVersion : String
+    tableTotal : String
+    viewTotal : String
+    prcTotal : String
+    fucTotal : String
+    userTotal : String
+    dataTotal : String
+    dataSize : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetDatasourceTInput {
+    tid : String
+    assetId : String
+    dbType : String
+    dbIp : String
+    dbPort : String
+    dbUser : String
+    dbPassword : String
+    dbMetaType : String
+    dbMetaIp : String
+    dbMetaPort : String
+    dbMetaUser : String
+    dbMetaPassword : String
+    dbVersion : String
+    tableTotal : String
+    viewTotal : String
+    prcTotal : String
+    fucTotal : String
+    userTotal : String
+    dataTotal : String
+    dataSize : String
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+
+
+
+
+
+##############################AssetTableT##############################
+type AssetTableT {
+    tid : String
+    assetId : String
+    columnTotal : String
+    rowTotal : String
+    dataSize : String
+    ddlCreateTime : Date
+    ddlUpdateTime : Date
+    dataUpdateTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}
+input AssetTableTInput {
+    tid : String
+    assetId : String
+    columnTotal : String
+    rowTotal : String
+    dataSize : String
+    ddlCreateTime : Date
+    ddlUpdateTime : Date
+    dataUpdateTime : Date
+    tenantId : String
+    revision : String
+    createdBy : String
+    createdTime : Date
+    updatedBy : String
+    updatedTime : Date
+    isDel : Int
+}

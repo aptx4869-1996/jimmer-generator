@@ -1,0 +1,24 @@
+type Query {
+}
+
+type Mutation {
+}
+
+#foreach ($oneTable in $tableInfos)
+==================================${oneTable.className}==================================
+type ${oneTable.className} {
+    #foreach ($item in $oneTable.columnInfos)
+        ${item.fieldName} : $item.columnType
+    #end
+}
+input ${oneTable.className}Input {
+    #foreach ($item in $oneTable.columnInfos)
+        ${item.fieldName} : $item.columnType
+    #end
+}
+
+
+
+
+
+#end
