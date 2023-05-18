@@ -1,11 +1,16 @@
 scalar Date
+schema {
+    query: Query
+    mutation: Mutation
+}
 
 type Query {
-    assetDataT(input: AssetDataTInput!): [AssetDataT!]!
+    assetDataT(assetDataT: AssetDataTInput): [AssetDataT]
+    assetApplications(assetApplicationT: AssetApplicationTInput): [AssetApplicationT]
 }
 
 type Mutation {
-    saveAssetData(input: AssetDataTInput): AssetDataT!
+    saveAssetData(assetDataT: AssetDataTInput): AssetDataT!
     deleteAssetData(ids: [String]!):Int
 }
 

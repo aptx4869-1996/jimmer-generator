@@ -26,6 +26,10 @@
         <swagger.version>2.1.4</swagger.version>
         <io.springfox.version>3.0.0</io.springfox.version>
         <springdoc-openapi>2.0.4</springdoc-openapi>
+        <hutool-all.version>5.8.18</hutool-all.version>
+        <lombok.version>1.18.26</lombok.version>
+        <lettuce-core.version>6.2.0.RELEASE</lettuce-core.version>
+        <caffeine.version>2.9.1</caffeine.version>
     </properties>
     <dependencies>
         <!--		springboot基础-->
@@ -46,7 +50,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
         <!--        mysql-->
@@ -54,6 +58,32 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-connector.version}</version>
+        </dependency>
+
+        <!--        hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool-all.version}</version>
+        </dependency>
+
+        <!--Caffeine的依赖-->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>${caffeine.version}</version>
+        </dependency>
+
+        <!--Redis的依赖-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>${lettuce-core.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <!--        swagger-->
         <!--        <dependency>-->

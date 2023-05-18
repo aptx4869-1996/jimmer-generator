@@ -1,7 +1,9 @@
 package com.jimmer.graphql.model.input;
 
 import com.jimmer.graphql.model.entity.AssetDataT;
+import lombok.Data;
 import org.babyfish.jimmer.Input;
+import org.babyfish.jimmer.client.FetchBy;
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -9,7 +11,7 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 
-
+@Data
 public class AssetDataTInput implements Input<AssetDataT> {
     private static final Converter CONVERTER = Mappers.getMapper(Converter.class);
 

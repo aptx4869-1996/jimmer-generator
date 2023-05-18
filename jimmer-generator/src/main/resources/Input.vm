@@ -8,9 +8,23 @@ import java.time.LocalDateTime;
 * ${tableInfo.tableComment}
 */
 @Data
-public class ${tableInfo.className}Input {
+public class ${tableInfo.className}Input implements Input<${tableInfo.className}>{
+
+private static final Converter CONVERTER = Mappers.getMapper(Converter.class);
+
 #foreach ($item in $list)
     private $item.columnType $item.fieldName;
 #end
+
+@Override
+public ${tableInfo.className} toEntity() {
+return CONVERTER.to${tableInfo.className}(this);
+}
+
+@Mapper
+interface Converter {
+@BeanMapping(unmappedTargetPolicy = ReportingPolicy.IGNORE)
+${tableInfo.className} to${tableInfo.className}(${tableInfo.className}Input input);
+}
 
 }
